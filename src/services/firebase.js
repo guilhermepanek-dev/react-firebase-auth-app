@@ -1,30 +1,21 @@
-// ============================================================
-//  Configuração e inicialização do Firebase
-// ============================================================
-//  1) Crie um projeto em https://console.firebase.google.com
-//  2) Ative Authentication -> Sign-in method -> E-mail/senha
-//  3) Crie um banco Firestore Database
-//  4) Em Configurações do projeto -> Seus apps -> Web app,
-//     copie o objeto firebaseConfig e cole abaixo:
-// ============================================================
-
+// Serviço de configuração do Firebase
+// Projeto: react-firebase-auth-app-f9182 (console.firebase.google.com)
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
-// >>> Substitua pelos dados do SEU projeto Firebase <<<
 const firebaseConfig = {
-  apiKey: 'SUA_API_KEY',
-  authDomain: 'SEU_AUTH_DOMAIN',
-  projectId: 'SEU_PROJECT_ID',
-  storageBucket: 'SEU_STORAGE_BUCKET',
-  messagingSenderId: 'SEU_MESSAGING_SENDER_ID',
-  appId: 'SEU_APP_ID',
+  apiKey: 'AIzaSyBpeQ5Uyxb8Y3Ha5YJUUqSoJ701xJx8mTI',
+  authDomain: 'react-firebase-auth-app-f9182.firebaseapp.com',
+  projectId: 'react-firebase-auth-app-f9182',
+  storageBucket: 'react-firebase-auth-app-f9182.firebasestorage.app',
+  messagingSenderId: '897019259605',
+  appId: '1:897019259605:web:1664858a9b829bd003505c',
 };
 
 // Inicializa o app do Firebase
 const app = initializeApp(firebaseConfig);
 
-// Serviços exportados para toda a aplicação
+// Exporta as instâncias de Authentication e Firestore
 export const auth = getAuth(app);
 export const db = getFirestore(app);
