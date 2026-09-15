@@ -1,5 +1,7 @@
 # React Firebase Auth App 🔥
 
+> 🌐 **Site publicado:** https://guilhermepanek-dev.github.io/react-firebase-auth-app/
+
 Aplicação em **React** com **3 páginas distintas** construída com **React Router Dom** (rotas em arquivo separado) e integração com **Firebase Authentication** (provedor E-mail/senha) + **Cloud Firestore**.
 
 ## 📄 Páginas
