@@ -5,7 +5,20 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>React Firebase Auth - Cadastro, Login e Principal</title>
-  </head>
+    <script>
+      // Truque para o BrowserRouter funcionar no GitHub Pages:
+      // o 404.html salva a rota original no sessionStorage e redireciona
+      // para a raiz; este script restaura a URL antes do app carregar.
+      (function () {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.pathname) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
+  <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>

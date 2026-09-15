@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>React Firebase Auth - Cadastro, Login e Principal</title>
+    <script>
+      // GitHub Pages não sabe lidar com rotas de SPA (BrowserRouter).
+      // Quando alguém abre /react-firebase-auth-app/login diretamente,
+      // o Pages devolve este 404.html. Aqui salvamos a rota original
+      // no sessionStorage e voltamos para a raiz, onde o index.html
+      // restaura a URL antes de o React Router assumir o controle.
+      (function () {
+        var prefix = '/react-firebase-auth-app';
+        if (location.pathname.indexOf(prefix) === 0) {
+          sessionStorage.redirect =
+            location.pathname + location.search + location.hash;
+        }
+        location.replace('/react-firebase-auth-app/');
+      })();
+    </script>
+  <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+  <body></body>
+</html>
